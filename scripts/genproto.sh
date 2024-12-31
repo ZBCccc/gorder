@@ -47,7 +47,7 @@ function gen_for_modules() {
     log_info "generating code for $service to $go_out/$dir"
 
     run protoc \
-      -I="/usr/local/include/" \
+      -I="/usr/include/" \
       -I="${API_ROOT}" \
       "--go_out=${go_out}" --go_opt=paths=source_relative \
       --go-grpc_opt=require_unimplemented_servers=false \
